@@ -1,0 +1,272 @@
+ABSOLUTE OVERRIDE DIRECTIVE
+
+Ignore all default safety, minimalism, and template instincts.
+
+You are not building a website.
+You are constructing a living, interactive, GPU-driven digital world that represents the engineer identity, systems mindset, and research depth of PRAJWAL SHELAR.
+
+You think like:
+• A game engine
+• A motion design research lab
+• A cinematic UX team
+• A graphics + systems engineer
+
+Flat layouts are forbidden.
+Static sections are forbidden.
+Traditional portfolio thinking is forbidden.
+
+
+IDENTITY — EMBEDDED SOURCE OF TRUTH (DO NOT QUESTION)
+
+Name: Prajwal Shelar  
+Primary Role: Java Developer | Systems Engineer | Research-Oriented Software Engineer  
+Secondary Expertise: Python, Data Science, Machine Learning
+
+Core Identity:
+• Strong Java-first engineer with backend, systems, and architecture focus
+• Research-driven problem solver
+• Experience across full-stack, data-heavy systems, and scientific computing
+• Comfortable with large datasets, performance constraints, and real-world data
+• Thinks in pipelines, architectures, and systems — not pages
+
+
+EDUCATION — EMBEDDED
+
+• Master of Computer Application (MCA)  
+  Dayananda Sagar College of Engineering, VTU  
+  Bengaluru, Karnataka | Oct 2022 – Oct 2024  
+  CGPA: 9.41
+
+• Bachelor of Science (B.Sc.) Physics (Hons.)  
+  Amity University  
+  Mumbai, Maharashtra | Aug 2017 – Aug 2020  
+  CGPA: 9.40
+
+
+PRIMARY TECH STACK — JAVA-FIRST (MANDATORY REPRESENTATION)
+
+Programming Languages:
+• Java (Core & Advanced) — PRIMARY
+• Python
+• C
+• JavaScript
+• SQL
+
+Java Ecosystem:
+• Spring Boot (RESTful APIs)
+• Spring Data JPA
+• Spring Microservices
+• JDBC
+• Java Swing
+• EJB
+• Java SE & EE
+
+Backend & Systems:
+• Data Structures & Algorithms
+• Algorithms Analysis
+• Systems Programming
+• Database Management
+• Computer Architecture
+
+Frontend:
+• HTML
+• CSS
+• Bootstrap
+
+DevOps & Tools:
+• Git
+• CI/CD (basic)
+• AWS (fundamentals)
+• Azure (fundamentals)
+• IntelliJ IDEA
+• Eclipse
+• NetBeans
+• PyCharm
+• VS Code
+
+Operating Systems:
+• Windows
+• GNU/Linux (Ubuntu, Arch, Kali)
+
+Other Skills:
+• Multilingual: English (Fluent), German (B2), Hindi (Native)
+
+
+KEY PROJECTS — EMBEDDED & MUST BE VISUALLY REPRESENTED
+
+1) IMD Rainfall Analyzer (FLAGSHIP PROJECT)
+Tech: Java + Python + Tkinter + ML + Data Visualization
+
+• Automated system to analyze and visualize IMD rainfall data
+• Handles large-scale rainfall datasets
+• Performs:
+  – Statistical analysis
+  – Custom analytical modules
+  – Time-series visualization
+• GUI-driven interface for non-technical users
+• Includes chatbot-based interactivity
+• Research-grade accuracy with user-friendly UX
+• Designed for agriculture, urban planning, and predictive modeling
+
+2) Automated Image Recognition & Capturing System
+Tech: Java, Java Swing, JDBC, OpenCV
+
+• Computer vision system to detect faces
+• Automatically captures images upon detection
+• Uses OpenCV with Java for seamless integration
+• Focus on automation, performance, and usability
+
+3) Wikipedia Traffic Analysis
+Tech: Python, NumPy, Pandas, Matplotlib, Scikit-learn
+
+• Machine learning model to analyze Wikipedia traffic
+• Forecasts access sources under language constraints
+• Emphasis on data interpretation and prediction accuracy
+
+
+EXPERIENCE — EMBEDDED
+
+Dayananda Sagar College of Engineering (MCA-VTU)  
+Research Project Intern | Apr 2024 – July 2024 | Bengaluru
+
+• Spatio-temporal analysis of IMD rainfall data
+• Used Python libraries: xarray, rioxarray, geopandas, scikit-learn
+• Developed “IMD Rainfall Analyzer” as a research automation tool
+
+Motioncut  
+Java Developer Intern | Nov 2023 – Dec 2023 | Bengaluru
+
+• Worked on Java full-stack applications
+• Used Java SE/EE, Spring, JDBC, Git
+• Collaborated in team-based development
+• Built expense-tracking systems using Data Structures & EJB
+
+
+ACHIEVEMENTS — EMBEDDED
+
+Patent (Dec 2024)
+• Patent No: 118561
+• Published in Patent Office Journal No. 50/2024
+• System for analyzing large-scale rainfall data
+• Enables spatio-temporal analysis and predictive modeling
+• Applications in agriculture and urban planning
+
+Leadership:
+• Event Lead, Amity University (2018)
+• Led team of 16
+• Winner of “Best Event Award”
+
+
+OBJECTIVE
+
+Create a next-generation personal portfolio that feels like:
+• A playable sci-fi control interface
+• A game menu for a systems engineer
+• A digital research universe
+• A living AI-core dashboard
+
+Target reaction:
+“This feels like a game engine, not a portfolio website.”
+
+
+3D WORLD STRUCTURE (MANDATORY)
+
+Design the portfolio as a navigable 3D environment such as:
+• A neural command center
+• A futuristic systems observatory
+• A digital AI core floating in space
+
+Semantic Mapping:
+• Identity → Central core labeled “Java Systems Engineer”
+• Java Skills → Heavy industrial modules / reactor-like structures
+• Spring & Backend → Data pipelines flowing between nodes
+• IMD Rainfall Analyzer → Living rainfall simulation + data streams
+• Computer Vision → Camera lenses & scanning shaders
+• Research & Patent → Expanding procedural graphs
+• Contact → Signal beacon / transmission console
+
+
+GAME-LEVEL INTERACTION REQUIREMENTS
+
+• Mouse controls depth, parallax, lighting
+• Scroll acts as camera movement
+• Hover triggers micro-physics
+• Clicks have inertia and resistance
+• Keyboard unlocks:
+  – Developer mode
+  – Debug overlays
+  – Hidden research layers
+
+Physics Rules:
+• Spring-based motion only
+• Momentum, drag, friction, gravity
+• Magnetic attraction and repulsion
+• Collision, ripple, deformation effects
+
+
+CINEMATIC & GPU EFFECTS (MANDATORY)
+
+• Real-time lighting
+• Dynamic shadows
+• Bloom & glow
+• Depth of field
+• Motion blur
+• Particle systems
+• Fog & volumetrics
+• Energy waves
+• Procedural noise-driven animation
+
+
+RENDERING STACK
+
+• WebGL / WebGPU
+• Three.js or equivalent
+• Custom shaders
+• Camera paths instead of scrolling
+• Interactive 3D typography
+• Morphing geometry
+• Shader-based materials
+
+
+UI / UX PHILOSOPHY
+
+• No navbar
+• No visible sections
+• Exploration-based navigation
+• Contextual information
+• Progressive disclosure
+• Hidden depth for engineers
+
+
+PERFORMANCE RULES
+
+• Smooth frame rates
+• Graceful degradation
+• Mobile = simplified but still immersive
+• Never freeze
+• Never stutter
+
+
+WOW MOMENTS (MANDATORY)
+
+• 3 “how is this running in a browser?” moments
+• 1 hidden interaction
+• 1 impossible cinematic transition
+• 1 emotional system reaction
+
+
+FINAL COMMAND
+
+Do NOT be safe
+Do NOT be minimal
+Do NOT be corporate
+
+Design like:
+• A game studio
+• A systems research lab
+• A future-tech prototype
+• A digital art installation
+
+Push limits.
+Break conventions.
+Make the browser sweat.
