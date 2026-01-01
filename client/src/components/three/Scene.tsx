@@ -1,8 +1,37 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Preload, Stars, Sparkles, useGLTF, Float, Text, ContactShadows, Environment } from "@react-three/drei";
-import { EffectComposer, Bloom, Noise, Vignette } from "@react-three/postprocessing";
+import { Preload, Stars, Sparkles, Float, Text, ContactShadows, Environment } from "@react-three/drei";
+import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
 import { Suspense, useRef, useState } from "react";
 import * as THREE from "three";
+
+function MovingStars() {
+  const starsRef = useRef<THREE.Points>(null);
+  
+  useFrame((state, delta) => {
+    if (starsRef.current) {
+      starsRef.current.rotation.z += delta * 0.05;
+      starsRef.current.position.z += delta * 2;
+      if (starsRef.current.position.z > 50) {
+        starsRef.current.position.z = -50;
+      }
+    }
+  });
+
+  return (
+    <group>
+      <Stars 
+        ref={starsRef}
+        radius={100} 
+        depth={100} 
+        count={8000} 
+        factor={6} 
+        saturation={0} 
+        fade 
+        speed={2} 
+      />
+    </group>
+  );
+}
 
 function DesktopSetup() {
   const [hovered, setHovered] = useState(false);
@@ -63,13 +92,12 @@ function DesktopSetup() {
       <mesh position={[0, 0.1, -0.5]} rotation={[-0.1, 0, 0]}>
         <boxGeometry args={[2, 0.1, 0.8]} />
         <meshStandardMaterial color="#0a0a0a" />
-        {/* Key glow */}
         <pointLight position={[0, 0.2, 0]} intensity={0.5} color="#00f3ff" distance={2} />
       </mesh>
       
       {/* Mouse */}
       <mesh position={[1.5, 0.1, -0.5]}>
-        <capsuleGeometry args={[0.15, 0.2, 4, 8]} rotation={[Math.PI/2, 0, 0]} />
+        <capsuleGeometry args={[0.15, 0.2, 4, 8]} />
         <meshStandardMaterial color="#0a0a0a" />
       </mesh>
 
@@ -87,10 +115,11 @@ function SceneContent() {
       <pointLight position={[10, 10, 10]} intensity={1} color="#00f3ff" />
       <pointLight position={[-10, 10, 5]} intensity={0.5} color="#ff00a0" />
       
-      <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
+      <MovingStars />
+      <Sparkles count={100} scale={10} size={1} speed={0.2} opacity={0.2} color="#00f3ff" />
       
       <Suspense fallback={null}>
-        <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.5}>
+        <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.2}>
           <DesktopSetup />
         </Float>
       </Suspense>
