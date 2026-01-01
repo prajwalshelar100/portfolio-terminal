@@ -36,16 +36,19 @@ function SceneContent() {
 
 export default function Scene() {
   return (
-    <Canvas 
-      className="w-full h-full"
-      gl={{ antialias: false, toneMapping: THREE.ReinhardToneMapping, toneMappingExposure: 1.5 }} 
-      dpr={[1, 2]}
-      camera={{ position: [0, 0, 5], fov: 75 }}
-    >
-      <Suspense fallback={null}>
-        <SceneContent />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div className="fixed inset-0 z-0 bg-black pointer-events-auto overflow-hidden">
+      <Canvas 
+        className="w-full h-full"
+        gl={{ antialias: false, toneMapping: THREE.ReinhardToneMapping, toneMappingExposure: 1.5 }} 
+        dpr={[1, 2]}
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        style={{ pointerEvents: 'auto' }}
+      >
+        <Suspense fallback={null}>
+          <SceneContent />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 }
