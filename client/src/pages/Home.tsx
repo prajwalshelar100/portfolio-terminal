@@ -7,13 +7,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
   const [booted, setBooted] = useState(false);
-  const { toast } = useToast();
 
   return (
-    <main className="w-full h-screen bg-black overflow-hidden relative selection:bg-[#00f3ff] selection:text-black">
-      <AnimatePresence>
+    <main className="w-full h-screen bg-black overflow-hidden relative selection:bg-[#00f3ff] selection:text-black touch-none">
+      <AnimatePresence mode="wait">
         {!booted && (
           <motion.div 
+            key="boot"
             exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
             transition={{ duration: 1 }}
             className="fixed inset-0 z-[100]"
@@ -25,13 +25,16 @@ export default function Home() {
 
       {booted && (
         <motion.div 
+            key="main"
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             transition={{ duration: 2 }}
-            className="w-full h-full"
+            className="w-full h-full relative"
         >
             <HUD />
-            <Scene />
+            <div className="absolute inset-0 z-0">
+              <Scene />
+            </div>
         </motion.div>
       )}
     </main>
