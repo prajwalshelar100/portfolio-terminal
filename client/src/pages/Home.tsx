@@ -13,8 +13,8 @@ export default function Home() {
         {!booted && (
           <motion.div 
             key="boot"
-            exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
-            transition={{ duration: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
             className="fixed inset-0 z-[100]"
           >
             <BootSequence onComplete={() => setBooted(true)} />
@@ -23,16 +23,14 @@ export default function Home() {
       </AnimatePresence>
 
       {booted && (
-        <motion.div 
-            key="main"
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            transition={{ duration: 1 }}
-            className="w-full h-full relative"
-        >
+        <div className="w-full h-full relative">
+          <div className="absolute inset-0 z-0">
             <Scene />
+          </div>
+          <div className="absolute inset-0 z-10 pointer-events-none">
             <HUD />
-        </motion.div>
+          </div>
+        </div>
       )}
     </main>
   );
