@@ -1,15 +1,14 @@
 import Scene from "@/components/three/Scene";
 import { HUD } from "@/components/ui/HUD";
 import { BootSequence } from "@/components/ui/BootSequence";
-import { useToast } from "@/hooks/use-toast";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
   const [booted, setBooted] = useState(false);
 
   return (
-    <main className="w-full h-screen bg-black overflow-hidden relative selection:bg-[#00f3ff] selection:text-black">
+    <main className="w-full h-screen bg-black relative selection:bg-[#00f3ff] selection:text-black">
       <AnimatePresence mode="wait">
         {!booted && (
           <motion.div 
@@ -28,16 +27,10 @@ export default function Home() {
             key="main"
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
             className="w-full h-full relative"
         >
-            {/* The 3D Scene comes first in the DOM for scrolling */}
-            <div className="absolute inset-0 z-0">
-              <Scene />
-            </div>
-            
-            {/* The HUD is on top but its container has pointer-events-none */}
-            {/* The interactive parts of the HUD (form, popups) have pointer-events-auto */}
+            <Scene />
             <HUD />
         </motion.div>
       )}
