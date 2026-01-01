@@ -4,17 +4,13 @@ import path from 'path';
 
 /**
  * Vite plugin that updates og:image and twitter:image meta tags
- * to point to the app's opengraph image with the correct Replit domain.
+ * to point to the app's opengraph image with the correct deployment URL.
  */
 export function metaImagesPlugin(): Plugin {
   return {
     name: 'vite-plugin-meta-images',
     transformIndexHtml(html) {
       const baseUrl = getDeploymentUrl();
-      if (!baseUrl) {
-        log('[meta-images] no Replit deployment domain found, skipping meta tag updates');
-        return html;
-      }
 
       // Check if opengraph image exists in public directory
       const publicDir = path.resolve(process.cwd(), 'client', 'public');
@@ -36,7 +32,8 @@ export function metaImagesPlugin(): Plugin {
         return html;
       }
 
-      const imageUrl = `${baseUrl}/opengraph.${imageExt}`;
+      // Use relative path if no base URL is provided, otherwise use full URL
+      const imageUrl = baseUrl ? `${baseUrl}/opengraph.${imageExt}` : `/opengraph.${imageExt}`;
 
       log('[meta-images] updating meta image tags to:', imageUrl);
 
@@ -56,15 +53,17 @@ export function metaImagesPlugin(): Plugin {
 }
 
 function getDeploymentUrl(): string | null {
-  if (process.env.REPLIT_INTERNAL_APP_DOMAIN) {
-    const url = `https://${process.env.REPLIT_INTERNAL_APP_DOMAIN}`;
-    log('[meta-images] using internal app domain:', url);
+  // Support custom deployment URL via environment variable
+  if (process.env.VITE_APP_URL) {
+    const url = process.env.VITE_APP_URL.replace(/\/$/, '');
+    log('[meta-images] using VITE_APP_URL:', url);
     return url;
   }
 
-  if (process.env.REPLIT_DEV_DOMAIN) {
-    const url = `https://${process.env.REPLIT_DEV_DOMAIN}`;
-    log('[meta-images] using dev domain:', url);
+  // Support PUBLIC_URL for static deployments
+  if (process.env.PUBLIC_URL) {
+    const url = process.env.PUBLIC_URL.replace(/\/$/, '');
+    log('[meta-images] using PUBLIC_URL:', url);
     return url;
   }
 

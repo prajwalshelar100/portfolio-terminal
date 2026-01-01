@@ -80,8 +80,7 @@ function DesktopSetup() {
           <Text
             position={[0, -0.5, 0.01]}
             fontSize={0.1}
-            color="#00f3ff"
-            opacity={hovered ? 1 : 0.5}
+            color={hovered ? "#00f3ff" : "#007799"}
           >
             CLICK TO OPEN PORTFOLIO
           </Text>

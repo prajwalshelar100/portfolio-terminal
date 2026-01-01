@@ -1,5 +1,5 @@
 import { useFrame, useThree } from "@react-three/fiber";
-import { useScroll, Text, Image, Float } from "@react-three/drei";
+import { Text, Image, Float } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 import { RainfallSimulation } from "./RainfallSimulation";
@@ -47,7 +47,6 @@ function TechBadge({ text, position, color = "#00f3ff" }: { text: string; positi
 // Project Panel
 function ProjectPanel({ title, description, position, index, children }: { title: string; description: string; position: [number, number, number], index: number, children?: React.ReactNode }) {
     const ref = useRef<THREE.Group>(null);
-    const scroll = useScroll();
     
     return (
         <group position={position} ref={ref}>
