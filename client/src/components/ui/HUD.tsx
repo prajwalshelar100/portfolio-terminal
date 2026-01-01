@@ -34,7 +34,7 @@ export function HUD() {
   };
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50 flex flex-col justify-between p-8 text-[#00f3ff] font-rajdhani uppercase tracking-widest mix-blend-screen">
+    <div className="fixed inset-0 pointer-events-none z-50 flex flex-col justify-between p-8 text-[#00f3ff] font-rajdhani uppercase tracking-widest">
       
       {/* Top Bar */}
       <header className="flex justify-between items-start w-full">

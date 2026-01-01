@@ -42,7 +42,7 @@ function SceneContent() {
 
 export default function Scene() {
   return (
-    <div className="w-full h-screen bg-black absolute top-0 left-0 -z-10">
+    <div className="w-full h-screen bg-black absolute top-0 left-0">
       <Canvas gl={{ antialias: false, toneMapping: THREE.ReinhardToneMapping, toneMappingExposure: 1.5 }} dpr={[1, 1.5]}>
         <Suspense fallback={null}>
           <SceneContent />
