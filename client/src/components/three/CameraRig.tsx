@@ -16,7 +16,7 @@ export function CameraRig() {
     // Start: [0, 0, 5]
     // Move down as we scroll
     
-    const targetY = -offset * state.viewport.height * 4.2; // Match total height of sections
+    const targetY = -offset * state.viewport.height * 8; // Match total height of sections
     
     // Smoothly interpolate camera position
     // We also add some noise/sway based on mouse position for "cockpit" feel

@@ -124,8 +124,8 @@ export function Sections() {
          />
       </group>
 
-      {/* SECTION 4: CONTACT (Scroll Offset ~4) */}
-      <group position={[0, -height * 4.2, 0]}>
+      {/* SECTION 4: CONTACT (Scroll Offset ~8) */}
+      <group position={[0, -height * 8, 0]}>
         <Text fontSize={1.5} color="#00f3ff" position={[0, 0, 0]}>
             INITIATE UPLINK
         </Text>

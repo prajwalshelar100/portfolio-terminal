@@ -19,7 +19,7 @@ export function HUD() {
     const cmd = input.toUpperCase();
     let response = `> COMMAND NOT RECOGNIZED: ${cmd}`;
     
-    if (cmd === "HELP") response = "> COMMANDS: IDENTITY, PROJECTS, CONTACT, CLEAR";
+    if (cmd === "HELP") response = "> COMMANDS: IDENTITY, PROJECTS, CONTACT, CLEAR. TYPE COMMAND IN BOX BELOW AND PRESS ENTER.";
     if (cmd === "IDENTITY") response = "> SUBJECT: PRAJWAL SHELAR | SYSTEMS ENGINEER";
     if (cmd === "PROJECTS") response = "> LOADING PROJECT DATABASE... 3 ENTRIES FOUND";
     if (cmd === "CONTACT") response = "> UPLINK ESTABLISHED. EMAIL: prajwalshelar.dev@system.local";
